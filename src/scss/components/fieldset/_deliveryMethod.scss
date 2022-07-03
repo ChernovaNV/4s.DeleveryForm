@@ -1,0 +1,16 @@
+// Выбор способа доставки
+
+.deliveryMethod {
+
+    &__header {
+        box-sizing: border-box;
+        max-width: 100%;
+        @include flex-all-sb;
+        margin-bottom: 15px;
+    }
+
+    &__buttons {
+        @include flex-all-center;
+        gap: 5px;
+    }
+}

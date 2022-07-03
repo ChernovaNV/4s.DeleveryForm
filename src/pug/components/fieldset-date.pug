@@ -1,0 +1,25 @@
+- 
+  var dates = [
+    {
+      id: 'date_1',
+      date: 'пн, 24 сен — ср, 26 сен',
+      time: '10:00–19:00'
+    },
+    {
+      id: 'date_2',
+      date: 'чт, 27 сен — пт, 28 сен',
+      time: '10:00–19:00'
+    }
+  ]
+
+
+fieldset.fieldset-reset.date(name='date')
+  .cards
+    each date in dates
+      .card.card__date
+        input.card__input(id=date.id, type='radio', name='date')
+        label.card__label.card__label--date(for=date.id)
+          p.card__title= date.date
+          p.card__time=date.time
+    
+  button.btn-reset.btn--text.btn--date(type="button")  Другие дата и время

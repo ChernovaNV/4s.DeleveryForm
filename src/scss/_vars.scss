@@ -1,0 +1,36 @@
+:root {
+  // font family
+  --font-family: "RTRootUI", sans-serif;
+
+  // Размер блоков
+  --container-width: 1775px;
+  --container-offset: 15px;
+  --footer-vh: 120px;
+
+  // Рамки
+  --radius-large: 6px;
+  --radius-base: 4px;
+  --radius-small: 2px;
+
+  //Размер шрифта
+  --fz-largest: 3.5rem;
+  --fz-large: 2.9rem;
+  --fz-base: 2.2rem;
+  --fz-small: 1.7rem;
+
+  // Цвета
+  --white: #fff;
+  --text: #333;
+  --main-bg: #f2f2f2;
+  --footer-bg: #f8f8f8; 
+  --gray-darker: #8c8c8c;
+  --gray-dark: #6e6e73;
+  --gray: #c5c5c5;
+  --gray-light: #d6d6d6;
+  --gray-lighter: rgb(214, 214, 214, 0.3);
+  --accent-color: #065cc2;
+  --accent-color-light:rgba(6, 92, 194, 0.2);
+  --accent-color-dark: rgb(5, 56, 119);
+  --red: #EC0002;
+  --red-light: rgb(235, 0, 4, 0.8);
+}

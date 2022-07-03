@@ -1,0 +1,70 @@
+// Карточки выбора
+
+.cards {
+    
+    display: flex; 
+    flex-wrap: nowrap;
+    gap: 15px;
+}
+
+.card {
+    &--deliveryMethod {
+        width: 100%;
+        position: relative;
+        max-width: 490px;
+        min-width: 300px;
+        width: 100%;
+    }
+
+    &__input {
+        display: none;
+        
+        &:checked + .card__label  {
+            padding: 20px;
+            border: 2px solid var(--accent-color);
+        }
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 100%;
+        height: 100%;
+        border: 1px solid var(--gray-light); 
+        border-radius: var(--radius-base);
+        padding: 21px;
+
+        cursor: pointer;
+
+        &:hover {
+            border-radius: var(--radius-base);
+            background: var(--gray-light);
+            background: linear-gradient(0deg, var(--white) 0%, var(--gray-lighter) 100%);
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+    }
+
+    &__price {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        min-width: 70px;
+        text-align: right;
+    }
+
+    &__address {
+       padding-right: 50px;
+    }
+
+
+
+}
+
+
+

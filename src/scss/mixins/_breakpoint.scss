@@ -1,0 +1,37 @@
+/*BreackPoints */
+
+@mixin large-desktop {
+  @media (min-width: (1486px)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: (1485px)) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: (1320px)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: (1250px)) {
+    @content;
+  }
+}
+
+@mixin small-tablet {
+  @media (max-width: (845px)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: (605px)) {
+    @content;
+  }
+}

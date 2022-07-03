@@ -1,0 +1,39 @@
+- 
+    var recipientsList = [
+        {
+            name: 'Вольфганг Вениaминович Константинопольский', 
+            phone: '+7 910 234-56-78',
+            selected: true
+        },
+        {
+            name: 'Иванов Иван Иванович',
+            selected: false,
+            phone: '+7 905 234-56-78'
+        },
+    ]
+
+fieldset.fieldset-reset.recipient(name='recipient')
+  legend
+    h2.subtitle Получатель
+
+  .recipient__inner
+    .recipient__data
+      .recipient__name
+        label.recipient__label(for='select_recipientName') 
+          | Имя и фамилия
+        select.recipient__select.recipient__select--recipientName(id='select_recipientName', name='recipientName')
+          each person in recipientsList
+              option(selected=person.selected, value=person.name)= person.name
+        svg.icon.icon--selectArrow(id='selectArrow_recipientName', width="14", height="22", viewBox="0 0 14 22", xmlns="http://www.w3.org/2000/svg")
+          path(d="M8.58354 11L0.333544 19.25L2.69021 21.6066L13.2969 11L2.69021 0.393311L0.333544 2.74998L8.58354 11Z")
+      button.btn-reset.btn--text.recipient__btnName(type="button")  Новый получатель
+
+    .recipient__data
+      .recipient__phone
+        label.recipient__label(for='select_recipientPhone') Контактный телефон
+        select.recipient__select.recipient__select--recipientPhone(id='select_recipientPhone', name='recipientPhone')
+          each person in recipientsList
+              option(selected=person.selected, value=person.phone)= person.phone
+        svg.icon.icon--selectArrow(id='selectArrow_recipientPhone', width="14", height="22", viewBox="0 0 14 22", xmlns="http://www.w3.org/2000/svg")
+          path(d="M8.58354 11L0.333544 19.25L2.69021 21.6066L13.2969 11L2.69021 0.393311L0.333544 2.74998L8.58354 11Z")
+      button.btn-reset.btn--text.recipient__btnPhone(type="button")  Новый телефон

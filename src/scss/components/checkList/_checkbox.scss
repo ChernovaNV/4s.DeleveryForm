@@ -1,0 +1,57 @@
+// Чекбоксы 
+
+.checkbox + .checkbox {
+    margin-top: 15px;
+}
+
+.checkbox {
+
+    &__input {
+        display: none;
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background-color: var(--accent-color-light);
+            border-radius: var(--radius-small);
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            display: inline-block;
+            top: 30%;
+            left: 4px;
+            width: 14px;
+            height: 9px;
+            border-left: 3px solid var(--white);
+            border-bottom: 3px solid var(--white);
+            transform: rotate(-45deg);
+        }
+
+        span {
+            margin-left: 10px;
+        }
+    }
+
+    &__input:checked + &__label:before{
+        background-color: var(--accent-color);
+    }
+
+    &__input:checked + &__label:after{
+        display: block;
+    }  
+}
+
+  
+  
+  
+  

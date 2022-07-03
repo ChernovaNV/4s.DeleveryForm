@@ -1,0 +1,39 @@
+// Таблица сайдбара
+
+.table {
+    width: 100%;
+    margin-top: 30px ;
+    margin-bottom: auto;
+    border-bottom: 1px solid var(--gray-light);
+    
+    table-layout: fixed;
+    border-collapse: collapse;
+
+    td {
+        padding-bottom: 15px;
+    }
+
+    td:nth-child(1) {
+        width: 70%;
+    }
+        
+    td:nth-child(2) {
+        width: 30%;
+        font-weight: 700;
+        text-align: right;
+    }
+
+    tfoot {
+        display: none;
+    }
+
+    &__row--total {
+        width: 100%;
+        td{
+            padding: 20px 0;
+            border-top: 1px solid var(--gray-light); 
+        }
+    }
+}
+
+      

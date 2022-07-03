@@ -1,0 +1,265 @@
+// Медиазапросы
+
+@include desktop {
+    //deliveryMethod
+    :root {
+        //Размер шрифта
+        --fz-largest: 3.3rem;
+        --fz-large: 2.7rem;
+        --fz-base: 2.1rem;
+        --fz-small: 1.7rem;
+    }
+
+    .form__main {
+        padding: 25px 25px 35px 25px;
+    }
+
+    .card--deliveryMethod {
+        max-width: 450px;
+    }
+
+    .btn--date {
+        margin-left: 0;
+    }
+
+    .recipient {
+        &__inner {
+            flex-direction: column;
+        }
+
+        &__data {
+            flex-direction: row;
+        }
+    }
+
+    .details {
+        min-width: 410px;
+
+        &__content {
+            padding: 40px 20px 0;
+        }
+    }
+
+    .footer {
+        &__inner {
+            padding: 15px 30px;
+        }
+        &__total {
+            max-width: 400px;
+        }
+    }
+}
+
+@include laptop {
+    :root {
+        //Размер шрифта
+        --fz-largest: 3.1rem;
+        --fz-large: 2.5rem;
+        --fz-base: 2.0rem;
+        --fz-small: 1.6rem;
+    }
+
+    .form {
+        &__main {
+            padding: 25px 15px 35px 15px;
+        }
+    }
+
+    .card {
+        &__address {
+            padding-right: 21px;
+        }
+        &__price {
+            position: static;
+            text-align: left;
+            transform: translateY(0);
+        }
+    }
+
+    .date {
+        display: block;
+    }
+
+    .recipient {
+        &__btnName {
+            position: absolute;
+            top: -55px;
+            right: 0;
+        }
+    }
+
+    .details__content {
+        padding: 40px 15px 0;
+    }
+
+    .footer__inner {
+        padding: 15px;
+    }
+}
+
+@include tablet {
+    :root {
+        //Размер шрифта
+        --fz-largest: 2.9rem;
+        --fz-large: 2.3rem;
+        --fz-base: 1.9rem;
+        --fz-small: 1.5rem;
+    }
+
+    .card {
+        &--deliveryMethod {
+            width: 380px;
+        }
+        &__label {
+            padding: 16px 21px;
+        }
+        &__input:checked + .card__label  {
+                padding: 15px 20px;
+            }
+        &__address {
+            font-size: var(--fz-small);
+        }
+    }
+
+    .btn--submit {
+        padding: 16px 20px;
+        font-size: var(--fz-base);
+    }
+    
+    .form__main {
+        padding: 25px 20px 35px 20px;
+    }
+
+    .recipient__select {
+        max-width: 100%;
+    }
+
+    .details { 
+        min-width: 360px;
+        display: none;
+
+        &.open {
+            position: absolute;
+            display: flex;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 1000;
+
+            tfoot {
+                display: contents;
+            }
+            .details__footer {
+                display: block;
+            }
+        }
+    }
+
+
+    .footer {
+        &__inner {
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            position: relative;
+           
+        }
+        &__total {
+            width: auto;
+            justify-content: center;
+            max-width: 100%;
+            font-weight: 700;
+
+            span {
+                margin-right: auto;
+                margin-left: 15px;
+            }
+        }
+        &__btn {
+            position: absolute;
+            right: 15px;
+            display: block;
+            margin-top: 0;
+        }
+    }
+}
+
+@include small-tablet {
+    .container {
+        padding: 0;
+    }
+
+    .form__title {
+        margin: 15px;
+    }
+
+    .deliveryMethod__buttons {
+        display: none;
+    }
+
+    .cards {
+        max-width: 840px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+            width: 0;
+             height: 0;
+        }
+        &--deliveryMethod {
+            width: 300px;
+        }
+    }  
+}
+
+@include mobile {
+    :root {
+        //Размер шрифта
+        --fz-largest: 3.0rem;
+        --fz-large: 2.1rem;
+        --fz-base: 1.7rem;
+        --fz-small: 1.4rem;
+    }
+
+    .cards {
+        max-width: 600px;
+    }
+
+    .card__date {
+        min-width: 120px;
+    }
+
+    .recipient {
+        &__data {
+            flex-direction: row;
+            max-width: 100%;
+        }
+        &__name {
+           width: 100%;
+        }
+        &__select--recipientName {
+            width: 100%;
+        }
+    }
+
+    .footer {
+        &__total {
+            width: 100%;
+            font-weight: 700;
+            font-size: var(--fz-small);
+            justify-content: space-between;
+
+            span {
+                font-size: var(--fz-small);
+                margin-right: auto;
+                margin-left: 5px;
+            }
+        }
+        &__btn {
+            position: static;
+        }
+    }
+} 

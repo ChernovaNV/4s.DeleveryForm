@@ -1,0 +1,21 @@
+- 
+    var boxes = [
+        {
+            id: 'check_sms',
+            text: 'Viber/СМС уведомление о статусе заказа'
+        },
+        {
+            id: 'check_noContact',
+            text: 'Оставить у двери (бесконтактная доставка)'
+        }
+    ]
+
+ul.list-reset.checkList
+    each item in boxes
+        li.checkbox
+            input.checkbox__input(id=item.id, type='checkbox') 
+            label.checkbox__label(for=item.id) 
+                span.checkbox__text=item.text
+
+
+

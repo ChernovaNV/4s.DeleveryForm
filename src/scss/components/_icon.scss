@@ -1,0 +1,26 @@
+// Иконки
+
+.icon {
+    max-width: 100%;
+    max-height: 100%;
+
+    &--arrow {
+        fill: #333;
+    }
+    &--arrowLeft{
+        transform: rotate(180deg);
+    }
+    &--selectArrow {
+        position: absolute;
+        top: 30px;
+        right: 15px;
+
+        width: 20px;
+        height: 20px;
+
+        fill: var(--gray-dark);
+
+        transform: rotate(90deg);
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,17 @@
+extends templates/base
+
+block content 
+    label.form__label(for='form')
+        h1.title.form__title Оформление заказа
+    form.form(id='form', action='#', method='post')
+        .form__main
+            // Способ получения
+            include ./components/fieldset-deliveryMethods
+            // Выбор даты
+            include ./components/fieldset-date
+            // СМС и бесконтактная доставка 
+            include ./components/checkList
+            // Данные о получателе
+            include ./components/fieldset-recipient
+        // Подробнее о заказе
+        include ./components/details

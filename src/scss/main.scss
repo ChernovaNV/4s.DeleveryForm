@@ -1,0 +1,33 @@
+//- базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+//- подключение компонентов страницы
+@import "./components/button";
+@import "./components/icon";
+
+//- подключение элементов, используемых только в одном компоненте pug
+@import "./components/form";
+
+@import "./components/checkList/checkList";
+@import "./components/checkList/checkbox";
+
+@import "./components/fieldset/fieldset";
+@import "./components/fieldset/card";
+@import "./components/fieldset/deliveryMethod";
+@import "./components/fieldset/date";
+@import "./components/fieldset/recipient";
+
+@import "./components/details/details";
+@import "./components/details/table";
+
+@import "./components/footer/footer";
+
+
+//- медиа запросы
+@import "./media";
+
+
+
